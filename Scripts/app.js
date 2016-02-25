@@ -2,26 +2,37 @@
 // Name: The Travel Report
 // Author: Sophie-Claire Hoeller
 // Website Name: The Travel Report
-// File Description:
+// File Description: Inserted paragraph text and users form data is sent to the console.
 
-
+// Cannot use undeclared variables
 "use strict";
 
-// setup your IIFE (Immediately Invoked Function Expression)
+// Setting up IIFE (Immediately Invoked Function Expression)
 var travelReport = (function () {
 
+	// Testing that the app starts
 	console.log("App Started...")
+
+
+// ===== Insert all Paragraph data by ID to the console =====
 
     // Declare an anonymous function for Intro Paragraph
     var replaceIntroParagraph = function() {
+    			//Indicate to the console what the javascript is doing
                console.log("Inserting the Intro Paragraph")
+        // Assign the variable for the first paragraph
         var IntroParagraph;
+        // The variable for the first paragraph is equal to the paragraph ID in the form 
         IntroParagraph = document.getElementById("IntroParagraph");
+        // Insert the following text into the variable IntroParagraph
         IntroParagraph.innerHTML = "Now is the time to travel to Greece. The country may be going through an economic crisis, but many travellers say that it hasn't impacted the experience of visiting. Plus, there may be some great deals. Greece has 1,400 islands, though only 230 of them are inhabited. And while everyone knows about Santorini and Mykonos, there are gorgeous lesser-known islands in Greece, too.";
     };
 
-    // Call Function
+    // Call the Function
 	replaceIntroParagraph();
+
+
+	// Repeat the same pattern for all other paragraph ID elements
 
 
     // Declare an anonymous function for Folegandros paragraph
@@ -131,8 +142,12 @@ var travelReport = (function () {
     // Call Function
 	replaceGavdos();
 
+	// ===== End Paragraph Insert Code =====
 
-	// Creating variable names and linking them to the their form id.
+
+	// ===== Send Form Data to the console =====
+
+	// Create variable names and link them to the their form id.
 	var firstName = document.getElementById("firstName");
 	var lastName = document.getElementById("lastName");
 	var email = document.getElementById("email");
@@ -140,8 +155,10 @@ var travelReport = (function () {
 	var submit = document.getElementById("submitButton");
 
 
+
 	// When the event listener on the submit button is activated, the form data is sent to the console.
 	submit.addEventListener("click", function() {
+		// Send the value of the form data entered by the user to the console.
 	    console.log("First Name: " + firstName.value);
 	    console.log ("Last Name: " + lastName.value);
 	    console.log ("Email: " + email.value);
@@ -151,5 +168,5 @@ var travelReport = (function () {
 }); // End Event Listener
 
 
-})();
+})(); // Close the IIFE (Immediately Invoked Function Expression)
 
