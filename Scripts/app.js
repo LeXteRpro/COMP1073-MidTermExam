@@ -1,3 +1,9 @@
+//File: app.js
+// Name: The Travel Report
+// Author: Sophie-Claire Hoeller
+// Website Name: The Travel Report
+// File Description:
+
 
 "use strict";
 
@@ -124,6 +130,25 @@ var travelReport = (function () {
 
     // Call Function
 	replaceGavdos();
+
+
+	// Creating variable names and linking them to the their form id.
+	var firstName = document.getElementById("firstName");
+	var lastName = document.getElementById("lastName");
+	var email = document.getElementById("email");
+	var comments = document.getElementById("comments");
+	var submit = document.getElementById("submitButton");
+
+
+	// When the event listener on the submit button is activated, the form data is sent to the console.
+	submit.addEventListener("click", function() {
+	    console.log("First Name: " + firstName.value);
+	    console.log ("Last Name: " + lastName.value);
+	    console.log ("Email: " + email.value);
+	    console.log ("Comments: " + comments.value);
+
+
+}); // End Event Listener
 
 
 })();
